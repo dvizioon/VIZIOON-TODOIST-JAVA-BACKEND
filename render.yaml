@@ -1,0 +1,15 @@
+services:
+  - type: web
+    name: vizioon-todoist-java-backend
+    runtime: docker
+    plan: free
+    dockerfilePath: ./Dockerfile
+    dockerContext: .
+    healthCheckPath: /health
+    envVars:
+      - key: JAVA_OPTS
+        value: -Xmx512m
+      - key: H2_CONSOLE_ENABLED
+        value: "true"
+      - key: SPRING_JPA_SHOW_SQL
+        value: "false"
