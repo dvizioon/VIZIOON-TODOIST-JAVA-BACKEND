@@ -1,7 +1,7 @@
 <h1 align="center">VIZIOON-TODOIST-JAVA-BACKEND</h1>
 
 <p align="center">
-  API REST de <strong>tarefas</strong> — CRUD completo com Spring Boot, JPA e H2<br />
+  API REST de <strong>tarefas</strong>, CRUD completo com Spring Boot, JPA e H2<br />
   Projeto Todoist da aula Java · StackUp
 </p>
 
@@ -19,20 +19,7 @@
 
 ## Links
 
-<p align="center">
-  <a href="https://vizioon-todoist-java-backend.onrender.com/health">
-    <img src="https://img.shields.io/badge/API_online-0B4692?style=for-the-badge" alt="API online" />
-  </a>
-  &nbsp;
-  <a href="https://vizioon-todoist-java-backend.onrender.com/h2-console">
-    <img src="https://img.shields.io/badge/H2_Console-1E6A30?style=for-the-badge" alt="H2 Console" />
-  </a>
-</p>
-
 - [Repositório](https://github.com/dvizioon/VIZIOON-TODOIST-JAVA-BACKEND)
-- [API de produção](https://vizioon-todoist-java-backend.onrender.com)
-- [Health check](https://vizioon-todoist-java-backend.onrender.com/health)
-- [H2 Console](https://vizioon-todoist-java-backend.onrender.com/h2-console)
 
 ---
 
@@ -40,7 +27,7 @@
 
 - **CRUD completo:** Criar, listar, buscar, atualizar e deletar tarefas.
 - **JPA + H2:** Entidade `Tarefa` mapeada para tabela; id auto incremento (`GenerationType.IDENTITY`).
-- **JSON automático:** Spring converte objetos Java ↔ JSON nas requisições.
+- **JSON automático:** Spring converte objetos Java e JSON nas requisições.
 - **CORS:** Rotas `/api/**` liberadas para front e Postman.
 - **Health check:** Endpoint `/health` para monitoramento.
 - **Docker:** Build pronto para container.
@@ -60,7 +47,7 @@
 > [!NOTE]
 > H2 em memória: os dados somem ao reiniciar o serviço.
 
-## Model `Tarefa` — tipos dos dados
+## Model `Tarefa`: tipos dos dados
 
 | Campo | Tipo Java | Tipo JSON | Exemplo |
 |-------|-----------|-----------|---------|
@@ -134,7 +121,7 @@ src/main/java/com/vizioon/todoist/
    | Health | `http://localhost:8080/health` |
    | H2 Console | `http://localhost:8080/h2-console` |
 
-   **H2 Console:** JDBC `jdbc:h2:mem:todoist` · user `daniel` · senha `1234`
+   **H2 Console:** JDBC `jdbc:h2:mem:todoist`, user `daniel`, senha `1234`
 
 ### Docker
 
