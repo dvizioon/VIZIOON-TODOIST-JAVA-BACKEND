@@ -5,6 +5,8 @@ import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 
+import java.time.LocalDate;
+
 @Entity
 public class Tarefa {
 
@@ -14,12 +16,12 @@ public class Tarefa {
 
     private String nome;
     private String descricao;
-    private String lembrete;
+    private LocalDate lembrete;
 
     public Tarefa() {
     }
 
-    public Tarefa(String nome, String descricao, String lembrete) {
+    public Tarefa(String nome, String descricao, LocalDate lembrete) {
         this.nome = nome;
         this.descricao = descricao;
         this.lembrete = lembrete;
@@ -45,11 +47,11 @@ public class Tarefa {
         this.descricao = descricao;
     }
 
-    public String getLembrete() {
+    public LocalDate getLembrete() {
         return lembrete;
     }
 
-    public void setLembrete(String lembrete) {
+    public void setLembrete(LocalDate lembrete) {
         this.lembrete = lembrete;
     }
 }

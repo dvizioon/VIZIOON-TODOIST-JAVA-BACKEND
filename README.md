@@ -48,6 +48,18 @@ Se o código ficar em subpasta, defina **Root Directory** no Render (ex.: `Proje
 | DELETE | `/api/tarefa/{id}` | Remove tarefa |
 | GET | `/health` | Status do serviço |
 
+## Exemplo JSON (POST / PUT)
+
+```json
+{
+  "nome": "Estudar Java",
+  "descricao": "Revisar JPA",
+  "lembrete": "2026-08-15"
+}
+```
+
+O campo `lembrete` é **data** (`LocalDate`), formato `AAAA-MM-DD`.
+
 ## Package Java
 
 `com.vizioon.todoist`
