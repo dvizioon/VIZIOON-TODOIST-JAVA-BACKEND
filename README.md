@@ -44,6 +44,7 @@ Se o código ficar em subpasta, defina **Root Directory** no Render (ex.: `Proje
 | GET | `/api/tarefa` | Lista todas |
 | GET | `/api/tarefa/{id}` | Busca por id |
 | POST | `/api/tarefa` | Cria tarefa |
+| PUT | `/api/tarefa/{id}` | Atualiza tarefa |
 | DELETE | `/api/tarefa/{id}` | Remove tarefa |
 | GET | `/health` | Status do serviço |
 

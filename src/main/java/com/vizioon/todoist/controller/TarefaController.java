@@ -30,6 +30,16 @@ public class TarefaController {
         return tarefaRepository.save(tarefa);
     }
 
+    @PutMapping("/{id}")
+    public Tarefa atualizarTarefa(@PathVariable Long id, @RequestBody Tarefa dados) {
+        Tarefa tarefa = tarefaRepository.findById(id)
+            .orElseThrow(() -> new RuntimeException("Tarefa não encontrada: " + id));
+        tarefa.setNome(dados.getNome());
+        tarefa.setDescricao(dados.getDescricao());
+        tarefa.setLembrete(dados.getLembrete());
+        return tarefaRepository.save(tarefa);
+    }
+
     @DeleteMapping("/{id}")
     public void deletarTarefa(@PathVariable Long id) {
         tarefaRepository.deleteById(id);
